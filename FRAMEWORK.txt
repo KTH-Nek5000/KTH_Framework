@@ -21,7 +21,7 @@ the parent directories (modules) perform some operations and can define tasks an
 to be provided by their subdirectories (submodules). This structure can be repeated recursively with 
 submodules becoming parent modules for nex level structures. 
 
-The top level direcotries in the framework point to three main github repositories (using submodules): 
+The top level direcotries in the framework point to three main github repositories (using git submodules): 
 stable release of Nek5000, toolboxes and examples.
 
 

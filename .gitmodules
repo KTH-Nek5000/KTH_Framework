@@ -6,3 +6,7 @@
 	path = Toolbox
 	url = https://github.com/adampep/KTH_Toolbox.git
 	branch = master
+[submodule "Examples"]
+	path = Examples
+	url = https://github.com/adampep/KTH_Examples.git
+	branch = master

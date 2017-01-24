@@ -40,5 +40,52 @@ git clone https://github.com/adampep/KTH_Examples -b master
 or as a single framework by
 @verbatim
 git clone --recursive https://github.com/adampep/KTH_Framework
-@endverbatim    
+@endverbatim 
+
+
+
+
+@page runtime_parameters_page Runtime parameters for KTH framework.
+
+One of the goals for KTH framework is to provide organised structure for runtime parameters, that would allow for 
+simple modiffication of parameter list without introducing conflicts between different code parts.  
+
+I this solution parameters can be defined by modules. Every module introducing new set of parameters should provide 
+paramerer reading/writing routines, that could be called by @ref runprm_in and @ref runprm_out respectively. 
+Parameters are groupped into sections corresponding to modules and storred in a \a setup.rpar file using Fortran90 
+namelist.
+The runtime parameter file has a followitn structure:
+@code{.f90}
+&TSTEPPER
+ TSTMODE=          1,
+ TSTSTEP=         40,
+ TSTCMAX=        200,
+ TSTTOL=  1.0000000000000000E-06 ,
+ TSTIFUZAWA=T,
+ /
+&ARPACK
+ ARNKRYLOV=        100,
+ ARNEGV=         10,
+ ARNISTART=          1,
+ ARNISTOP=          2,
+ /
+@endcode
+
+Each parameter reader should contain following sections:
+- namelist defitionion
+- default parameter values
+- reading from the file preceded by file rewind
+- broadcasting data
+
+Additional information
+- @subpage parameter_list_page
+- @subpage parameter_required_page
+
+
+@page parameter_list_page List of runtime parameters provided by all the modules.
+
+@page parameter_required_page List of runtime parameters required by the modules.
+
+This page gives information about module dependencies.
+   
 */

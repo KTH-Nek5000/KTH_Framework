@@ -1,28 +1,24 @@
 /**
-@brief Documentation file to be used in Doxygen main page.
+@brief Documentation file to be used in Doxygen pages.
 @author Adam Peplinski
 @file
 
 @mainpage Framework for toolboxes developed for Nek5000
 
-This framework provides created at KTH platform for development and shearing the tools based on [Nek5000] 
+@section intro Introduction
+This framework provides platform for development and shearing the tools based on [Nek5000] 
 (https://nek5000.mcs.anl.gov/) code. 
 It contains number of utilities that allow Nek5000 to perform additional tasks or to simplfy its usage.
 The main objective is to allow different Nek5000 users to exchange their code that is not part of Nek5000
-core but operates through standard user interface (mainly through userchk). 
-
-@section documentation Documentation
-To make this platform easy to use we pay attention to [Doxygen](http://www.stack.nl/~dimitri/doxygen/) 
-based documentation of every tolls. It has to provide detailed description of the tool itsef, 
-the routine interfaces, runtime parameters and possible dependencies between tools. The general 
-description of every tool is given in FRAMEWORK.txt, which is present in most directories.
+core but operates through standard user interface (mainly through \a userchk). 
 
 @section structure Framework structure
 To make this platform easy to expand and reuse existing code we introduce specific directory structure
 representing different tasks. All files are grouped by taks and placed in a tree structure, where 
 the parent directories (modules in Doxygen nomenclature) perform some operations and can define tasks 
 and interfaces that have to be provided by their subdirectories (submodules). This structure can be repeated 
-recursively with submodules becoming parent modules for next level structures. 
+recursively with submodules becoming parent modules for next level structures. For more information check 
+[Toolbox page] (@ref toolbox).
 
 @section download Download 
 The top level direcotries in the framework point to stable release of three main github repositories (using 
@@ -42,44 +38,109 @@ or as a single framework by
 git clone --recursive https://github.com/adampep/KTH_Framework
 @endverbatim 
 
+@section documentation Documentation
+To make this platform easy to use we pay attention to [Doxygen](http://www.stack.nl/~dimitri/doxygen/) 
+based documentation of every tolls. It has to provide detailed description of the tool itsef, 
+the routine interfaces, runtime parameters and possible dependencies between tools. The general 
+description of every tool is given in [FRAMEWORK.txt] (@ref toolbox), which is present in almost every 
+directory. This documentation is available online as GitHub Pages (gh-pages bfranch) and can be generated 
+locally by executing at the top level of the local copy of KTH_Framework repository:
+@verbatim
+mkdir html
+doxygen ./docs/Doxyfile
+rm doxygen.warning
+@endverbatim
+It requires doxygen 1.8.11 or newer and the dot tool from [Graphviz] (http://www.graphviz.org/). 
+All files required by doxygen are located under ./docs/. It includes configuration file (Doxyfile), bibliography
+(doxy.bib) and web pages contents (mainpage.dox). 
+
+
+
 
 
 
 @page runtime_parameters_page Runtime parameters for KTH framework.
 
-One of the goals for KTH framework is to provide organised structure for runtime parameters, that would allow for 
-simple modiffication of parameter list without introducing conflicts between different code parts.  
+@section rparam_file Runtime parameter file.
+An important issue for our framework is organised structure of runtime parameters that would allow for 
+simple modiffication of parameter list without introducing conflicts between different code parts.
+As old \a setup.rea file does not provide sufficent flexibility, all tool developers are obligated to use 
+new  \a setup.par file instead, as it organises runtime parameters by sections and in addition to 20 user
+parameters in \a [GENERAl] section allows to introduce user defined sections.
+Every section starting with underscore is treated as user section and its consistency is not checked by Nek5000
+core code. Following examples shows two native  Nek5000 sections and three user section correspondings to the modules 
+[chkpoint] (@ref chkpoint), [tstepper] (@ref tstepper) and [arnoldi_arpack] (@ref arnoldi_arpack):
+@code{.txt}
+#
+# nek parameter file
+#
+[GENERAL] 
+#startFrom = restart.fld 
+stopAt = numSteps #endTime
+endTime = 1.0
+numSteps = 500
 
-I this solution parameters can be defined by modules. Every module introducing new set of parameters should provide 
-paramerer reading/writing routines, that could be called by @ref runprm_in and @ref runprm_out respectively. 
-Parameters are groupped into sections corresponding to modules and storred in a \a setup.rpar file using Fortran90 
-namelist.
-The runtime parameter file has a followitn structure:
+[VELOCITY]
+residualTol = 1e-12
+residualProj = no
+#density = 1
+
+[_CHPOINT]
+chkptstep = 10
+ifchkptrst = no
+ 
+[_TSTEPPER]
+tstmode = 1
+tststep = 40
+tstcmax = 200
+tsttol = 1.0e-06
+tstifuzawa = yes
+
+[_ARPACK]
+arnkrylov = 100
+arnegv = 10
+arnistart = 1
+arnistop = 2
+@endcode
+
+@section rparam_module Module's runtime parameters.
+We use user defined sections to introduce runtime parametes defined in  modules. Every module introducing new set of 
+runtime parameters should manage their initialisation independently providing adequate initialisation routines, 
+that could be called within \a userchk:
 @code{.f90}
-&TSTEPPER
- TSTMODE=          1,
- TSTSTEP=         40,
- TSTCMAX=        200,
- TSTTOL=  1.0000000000000000E-06 ,
- TSTIFUZAWA=T,
- /
-&ARPACK
- ARNKRYLOV=        100,
- ARNEGV=         10,
- ARNISTART=          1,
- ARNISTOP=          2,
- /
+      subroutine userchk
+      include 'TSTEP'
+      
+      if (ISTEP.eq.0) then
+!     initialise runtime parameters
+         call chkpt_param_get
+         call tstpr_param_get
+      else
+!     main checkpoint interface
+         call checkpoint_main
+!     main time stepper interface
+         call tstepper_main
+      endif
+      return
+      end
 @endcode
 
 Each parameter reader should contain following sections:
-- namelist defitionion
-- default parameter values
-- reading from the file preceded by file rewind
+- initialisation with default values
+- reading values from Nek5000 dictionary
 - broadcasting data
+- call to submodul's parameter reader
 
-Additional information
+To avoid conflicts between different modules the runtime parameter and module initialisation are separated. 
+It is because the Nek5000 dictionary (\a setup.par file) can list only the parameters that differ from their
+default values, and those are specified in a code of a given module only. That is why at the module initialisation 
+step we use variables defined in include files insted of the dictionary. In case of Nek5000 runtime parameters we 
+use variables defined in \a INPUT include file, e.g. \a param array.
+
+The list of all defined parameters and dependency between different modules are described in following pages:
 - @subpage parameter_list_page
 - @subpage parameter_required_page
+- @subpage readers_writers_page
 
 
 @page parameter_list_page List of runtime parameters provided by all the modules.
@@ -87,5 +148,10 @@ Additional information
 @page parameter_required_page List of runtime parameters required by the modules.
 
 This page gives information about module dependencies.
+
+@page readers_writers_page List of routines reading runtime parameters.
+-# @ref user_param_in
+-# @ref tstpr_param_get and readers in submodules of @ref tstepper
+-# @ref chkpt_param_get
    
 */

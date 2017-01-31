@@ -168,19 +168,18 @@ SUBMODULES arnildi_arpack \
            powerit
 
 #List of conflicting submodules
-CONFLICTS arnoldi_arpack \
+EXCLUSIVE arnoldi_arpack \
           powerit
 
 #Default submodules
 DEFAULT arnoldi_arpack
 
-#List of required modules
-REQUIRED io/checkpoint/dummy
-         
-#List of required conflicting modules
-EXCLUSIVE arnoldi_arpack \
-          powerit
+#List of conflicting modules
+CONFLICTS
 
+#List of required modules
+REQUIRED
+         
 #List of object files
 OBJECT time_stepper.o
 
@@ -188,24 +187,22 @@ OBJECT time_stepper.o
 INCLUDE TIME_STEPPERD
 @endcode
 
-This module contains two conflicting submodules @ref arnoldi_arpack and @ref powerit, and depends on module
-@ref chkptdummy stored under io directoriy. To setup specific case one has to check dependency of all important 
-modules to get a complete list of required modules and exclude possible conflicts. In the case of
-spectra calulation with \a PARPACK library one checks FRAMEWORK.txt under:
-- \a tools/tstepper/arnoldi_arpack/,
-- \a io/checkpoint/dummy,
-
-and finds that \a io/checkpoint/dummy depends on \a io/checkpoint (which is obvious, as every subdirectory
-depends on its parent directory). The final list of required modules is:
+This module contains two conflicting submodules @ref arnoldi_arpack and @ref powerit. To setup specific case 
+one has to check recursively dependency of all specified modules to get a complete list of required modules 
+and exclude possible conflicts. In the case of spectra calulation with \a PARPACK library one checks FRAMEWORK.txt 
+under \a tools/tstepper/arnoldi_arpack/ and finds that \a arnoldi_arpack depends on \a io/checkpoint/dummy and 
+\a io/io_tools. On the other had \a io/checkpoint/dummy depends on \a io/checkpoint, so the final list of 
+equired modules is:
 - \a tools/tstepper,
 - \a tools/tstepper/arnoldi_arpack/,
 - \a io/checkpoint,
-- \a io/checkpoint/dummy
+- \a io/checkpoint/dummy,
+- \a io/io_tools.
 
 Next one copies to the setup directory the source files listed in \a OBJECT and \a INCLUDE sections of 
 FRAMEWORK.txt of all required modules, and adds content of \a OBJECT to USR variable in makenek. The last 
-step before compilation is to concatenate makefile_usr.inc from module directories to generate setup 
-makefile_usr.inc.
+step before compilation is to concatenate makefile_usr.inc from requred modules' directories to generate
+makefile_usr.inc in the setup directory.
 
 @page developmnet_page Tool development workflow.
 

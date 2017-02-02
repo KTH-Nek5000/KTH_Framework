@@ -53,7 +53,7 @@ It requires doxygen 1.8.11 or newer and the dot tool from [Graphviz] (http://www
 All files required by doxygen are located under ./docs/. It includes configuration file (Doxyfile), bibliography
 (doxy.bib) and web pages contents (mainpage.dox). 
 
-@todo Add possibility to generate documentation in KTH_Tooljbox separately.
+@todo Add possibility to generate documentation in KTH_Toolbox separately.
 
 
 

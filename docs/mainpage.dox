@@ -50,7 +50,7 @@ framwork directory
 @verbatim
 git fetch
 git merge origin/master
-git submodule upadte --recursive
+git submodule update --recursive
 @endverbatim 
 
 @section documentation Documentation

@@ -133,7 +133,7 @@ that could be called within \a userchk:
       endif
       
 !     main checkpoint interface
-      call checkpoint_main
+      call chkpt_main
 !     main time stepper interface
       call tstepper_main
 

@@ -37,8 +37,8 @@ or as a single framework by
 git clone --recursive https://github.com/adampep/KTH_Framework
 @endverbatim 
 
-The second method is preferred as Nek5000 repository has no development no stable branches and all the 
-development goes directly to master branch. As stable releases are marked by tags the user has to be carful 
+The second method is preferred as Nek5000 repository has neither development nor stable branches and all the 
+development goes directly to master branch. As stable releases are marked by tags the user has to be careful 
 to clone Nek5000 version compatible with current tool version. On the other hand the submodule within 
 KTH_Framework points to the speciffic commit in Nek5000 repository forcing consistency between tools and 
 Nek5000 versions. For the same reason user has to be careful using
@@ -46,7 +46,7 @@ Nek5000 versions. For the same reason user has to be careful using
 git submodule update --remote Nek5000
 @endverbatim
 as it would load all the new commits. The proper way of upgrading KTH_Fremwork is running from the main 
-framwork directory
+framework directory
 @verbatim
 git fetch
 git merge origin/master

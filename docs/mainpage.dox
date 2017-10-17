@@ -16,8 +16,10 @@ To make this platform easy to expand and reuse existing code we introduce specif
 representing different tasks. All files are grouped by taks and placed in a tree structure, where 
 the parent directories (modules in Doxygen nomenclature) perform some operations and can define tasks 
 and interfaces that have to be provided by their subdirectories (submodules). This structure can be repeated 
-recursively with submodules becoming parent modules for next level structures. For more information check 
-[Toolbox page] (@ref toolbox).
+recursively with submodules becoming parent modules for next level structures. A backbone of the whole framework
+is module called [frame] (@ref frame) that provides dynamical databases for all tools (modules), runtimes parameters
+and timers introduced by framework. This module should be started first and all the remaining tools should 
+be registered with it. For more information check [Toolbox page] (@ref toolbox).
 
 @section download Download 
 The top level direcotries in the framework point to stable release of three main github repositories (using 
@@ -55,7 +57,7 @@ git submodule update --recursive
 
 @section documentation Documentation
 To make this platform easy to use we pay attention to [Doxygen](http://www.stack.nl/~dimitri/doxygen/) 
-based documentation of every toll. It has to provide detailed description of the tool itsef, 
+based documentation of every tool. It has to provide detailed description of the tool itsef, 
 the routine interfaces, runtime parameters and possible dependencies between modules. The general 
 description of every tool is given in [FRAMEWORK.txt] (@ref toolbox), which is present in almost every 
 directory. This documentation is available online as GitHub Pages (gh-pages bfranch) and can be generated 
@@ -101,15 +103,17 @@ residualProj = no
 #density = 1
 
 [_CHPOINT]
-chkptstep = 10
-ifchkptrst = no
+chkpInterval = 25
+readchkpt = yes
+chkpFnumber = 2
+WallTime = 02:05
  
-[_TSTEPPER]
-tstmode = 1
-tststep = 40
-tstcmax = 200
-tsttol = 1.0e-06
-tstifuzawa = yes
+[_TIME_STEPPER]
+mode = 1
+steps =  40
+maxCycles = 200
+tol =  1.0E-06
+ifuzawa = T
 
 [_ARPACK]
 arnkrylov = 100
@@ -119,46 +123,53 @@ arnistop = 2
 @endcode
 
 @section rparam_module Module's runtime parameters.
-We use user defined sections to introduce runtime parametes defined in  modules. Every module introducing new set of 
-runtime parameters should manage their initialisation independently providing adequate initialisation routines, 
-that could be called within \a userchk:
+We utilize user defined sections in \a setup.par to set values of runtime parametes defined in different modules. 
+To simplify interaction between different tools the [frame] (@ref frame) module provides dynamical database of 
+all available in the framework runtime parameters. To achieve this we introduce module registration phase and split
+if from module intialistation. The first step is initialisation of the framework itself by callilng [frame_start]
+(@ref frame_start). Next all the tools have to register themselves, their runtime parameters (providing name, 
+type, description and default values) and timers. At this point [frame_rparam] (@ref frame_rparam) can get values
+of registerd runtime parametars stored \a setup.par and distribute them among processors. Finally all the modules can 
+take back updated values of the runtime parameters and start module initialisation. Following example shows
+the way to initialise framework na d checkpointing module in \a userchk:
 @code{.f90}
       subroutine userchk
       include 'TSTEP'
       
       if (ISTEP.eq.0) then
-!     initialise runtime parameters
-         call chkpt_param_get
-         call tstpr_param_get
+!     start framework
+         call frame_start
+!     register modules
+         call chkpt_register
+!     get runtime parameters
+         call frame_rparam
+!     initialise modules
+         call chkpt_init
+
       endif
-      
-!     main checkpoint interface
+
+!     save/load files for full-restart
       call chkpt_main
-!     main time stepper interface
-      call tstepper_main
+
+!     finalise framework
+      if (ISTEP.ge.NSTEPS.or.LASTEP.eq.1) then
+         call frame_end
+      endif
 
       return
       end
 @endcode
 
-Each parameter reader should contain following sections:
-- initialisation with default values
-- check Nek5000 dictionary for module's runtime parameter consistency
-- reading values from Nek5000 dictionary
-- broadcasting data
-- call to submodul's parameter reader
+Each tool has to provide routines for registration and intialisation of the given module. [chkpt_register]
+(@ref chkpt_register) and [chkpt_init] (@ref chkpt_init) are good example of them.
 
-@warning Current version of runtime parameter code does not provide enough flexibility to check if the user section 
-names are properly spelled. It does not output default parameter value either. It could be important 
-for user modules, as different modules irrespective of their dependencies could be managed by different users.
+Dependencies between different modules can be expressed as a tree structure, which we would like to follow
+in our databese. That is why each module during registration has to specify its parent, which can be its real
+parent module (for submodules) or NEK5000 module (the first module registered by frame). In a similar way we 
+specify parents for timers.
 
-To avoid conflicts between different modules the runtime parameter and module initialisation are separated. 
-It is because the Nek5000 dictionary (\a setup.par file) can list only the parameters that differ from their
-default values, and those are specified in a code of a given module only. That is why at the module initialisation 
-step we use variables defined in include files instead of the dictionary. In case of Nek5000 runtime parameters we 
-use variables defined in \a INPUT include file, e.g. \a param array.
-
-The list of all defined parameters and dependency between different modules are described in following pages:
+The list of all defined parameters, their dafault values and dependency between different modules are described in 
+following pages:
 - @subpage parameter_list_page
 - @subpage parameter_required_page
 

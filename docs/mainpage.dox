@@ -102,11 +102,14 @@ residualTol = 1e-12
 residualProj = no
 #density = 1
 
+[_MONITOR]
+LogLevel = 4
+WallTime = 02:05
+
 [_CHPOINT]
 chkpInterval = 25
 readchkpt = yes
 chkpFnumber = 2
-WallTime = 02:05
  
 [_TIME_STEPPER]
 mode = 1
@@ -145,8 +148,10 @@ the way to initialise framework na d checkpointing module in \a userchk:
          call frame_rparam
 !     initialise modules
          call chkpt_init
-
       endif
+
+!     monitor simulation
+      call frame_monitor
 
 !     save/load files for full-restart
       call chkpt_main

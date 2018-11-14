@@ -85,92 +85,154 @@ As old \a setup.rea file does not provide sufficent flexibility, all tool develo
 new  \a setup.par file instead, as it organises runtime parameters by sections and in addition to 20 user
 parameters in \a [GENERAl] section allows to introduce user defined sections.
 Every section starting with underscore is treated as user section and its consistency is not checked by Nek5000
-core code. Following examples shows two native  Nek5000 sections and three user section correspondings to the modules 
-[chkpoint] (@ref chkpoint), [tstepper] (@ref tstepper) and [arnoldi_arpack] (@ref arnoldi_arpack):
+core code. Following examples shows two native  Nek5000 sections and three user sections:
 @code{.txt}
 #
 # nek parameter file
 #
 [GENERAL] 
-#startFrom = restart.fld 
+#startFrom = rst_lid.1
 stopAt = numSteps #endTime
-endTime = 1.0
-numSteps = 500
+#endTime = 1.0
+numSteps = 100
+
+dt = -1.0e-03
+timeStepper = bdf3 #char #steady
+variableDt = no
+targetCFL = 0.3
+
+writeControl = timeStep #runTime
+writeInterval = 50  
+
+dealiasing = yes
+filtering = hpfrt
+filterWeight = 10.0
+filterCutoffRatio = 0.84
+
+userParam01 =-3     # param(54) fixed flow rate dir.
+userParam02 = 1     # param(55) vol. flow rate
+
+[PROBLEMTYPE]
+stressFormulation = no
+#dp0dt = yes
+variableProperties = no
+
+[PRESSURE]
+#preconditioner = # Schwarz is default for Nekp4est - this line should be commented0
+residualTol = 1e-8
+residualProj = yes
 
 [VELOCITY]
-residualTol = 1e-12
-residualProj = no
-#density = 1
+residualTol = 1e-8
+residualProj = yes
+density = 1.0
+viscosity = -2.5E+03
+advection = yes
 
-[_MONITOR]
-LogLevel = 4
-WallTime = 02:05
-
-[_CHPOINT]
-chkpInterval = 25
-readchkpt = yes
-chkpFnumber = 2
- 
-[_TIME_STEPPER]
-mode = 1
-steps =  40
-maxCycles = 200
-tol =  1.0E-06
-ifuzawa = T
-
-[_ARPACK]
-arnkrylov = 100
-arnegv = 10
-arnistart = 1
-arnistop = 2
+#
+[_RUNPAR]               # Runtime parameter section for rprm module
+PARFWRITE            = no                     # Do we write runtime parameter file
+PARFNAME             = outparfile             # Runtime parameter file name for output (without .par)
+#
+[_MONITOR]              # Runtime parameter section for monitor module
+LOGLEVEL             = 4                      # Logging threshold for toolboxes
+WALLTIME             = 23:45                  # Simulation wall time
+#
+[_STAT]             # Runtime paramere section for statistics module
+AVSTEP               = 10
+IOSTEP               = 50
 @endcode
 
 @section rparam_module Module's runtime parameters.
 We utilize user defined sections in \a setup.par to set values of runtime parametes defined in different modules. 
 To simplify interaction between different tools the [frame] (@ref frame) module provides dynamical database of 
-all available in the framework runtime parameters. To achieve this we introduce module registration phase and split
-if from module intialistation. The first step is initialisation of the framework itself by callilng [frame_start]
-(@ref frame_start). Next all the tools have to register themselves, their runtime parameters (providing name, 
-type, description and default values) and timers. At this point [frame_rparam] (@ref frame_rparam) can get values
-of registerd runtime parametars stored \a setup.par and distribute them among processors. Finally all the modules can 
-take back updated values of the runtime parameters and start module initialisation. Following example shows
-the way to initialise framework na d checkpointing module in \a userchk:
+all available runtime parameters in the framework. To provide requred information to the framework we introduce 
+the module registration phase and split if from the module intialistation. All these steps are performed by 
+[frame_start](@ref frame_start), which initialises the framework itself and next calls a user interface \a frame_usr_register. 
+This routine shoud be placed in \a setup.usr and contain calls to the module registration routines. The registration 
+of the module consists of signing up the module in the database followed by the runtime parameters definitions 
+(name, type, description and default value) and finalised with timers definitions. This information is used to check 
+consistency of the \a setup.par file and to fill in runtime parameter database. Next user defined \a frame_usr_init 
+is called by [frame_start](@ref frame_start). It initilises all the modules by calling their initialisation routines. 
+This operation consists of taking back updated values of runtime parameters from the database and performing requred 
+by the module addtional operations.  
+
+Following example shows the way a statistics module is initialised:
 @code{.f90}
+!======================================================================
       subroutine userchk
-      include 'TSTEP'
-      
+      implicit none
+      include 'SIZE'            !
+      include 'TSTEP'           ! ISTEP, lastep, time
+      INCLUDE 'INPUT'           ! IF3D, PARAM
+
       if (ISTEP.eq.0) then
 !     start framework
          call frame_start
-!     register modules
-         call chkpt_register
-!     get runtime parameters
-         call frame_rparam
-!     initialise modules
-         call chkpt_init
+
+!     set volume flow parameters
+         param(54) = uparam(1)
+         param(55) = uparam(2)
       endif
 
 !     monitor simulation
       call frame_monitor
 
-!     save/load files for full-restart
-      call chkpt_main
+!     for statistics
+      call stat_avg
 
 !     finalise framework
-      if (ISTEP.ge.NSTEPS.or.LASTEP.eq.1) then
+      if (ISTEP.eq.NSTEPS.or.LASTEP.eq.1) then
          call frame_end
       endif
-
+     
       return
       end
+!======================================================================
+!> @brief Register user specified modules; called by frame_start
+      subroutine frame_usr_register
+      implicit none
+
+      include 'SIZE'
+      include 'FRAMELP'
+!-----------------------------------------------------------------------
+      call stat_register
+
+      return
+      end subroutine
+!======================================================================
+!> @brief Initialise user specified modules; called by frame_start
+      subroutine frame_usr_init
+      implicit none
+
+      include 'SIZE'
+      include 'FRAMELP'
+!-----------------------------------------------------------------------
+      call stat_init
+
+      return
+      end subroutine
+!======================================================================
+!> @brief Finalise user specified modules; called by frame_start
+      subroutine frame_usr_end
+      implicit none
+
+      include 'SIZE'
+      include 'FRAMELP'
+!-----------------------------------------------------------------------
+      call stat_end
+      
+      return
+      end subroutine
+!======================================================================
 @endcode
 
-Each tool has to provide routines for registration and intialisation of the given module. [chkpt_register]
-(@ref chkpt_register) and [chkpt_init] (@ref chkpt_init) are good example of them.
+Each tool has to provide routines for registration, intialisation and finalisation of the given module. 
+[chkpt_register] (@ref chkpt_register) and [chkpt_init] (@ref chkpt_init) are good example of them.
 
 Dependencies between different modules can be expressed as a tree structure, which we would like to follow
-in our databese. That is why each module during registration has to specify its parent, which can be its real
-parent module (for submodules) or NEK5000 module (the first module registered by frame). In a similar way we 
+in our database. That is why each module during registration has to specify its parent, which can be its real
+parent module (for submodules) or FRAME module (the first module registered by frame). In a similar way we 
 specify parents for timers.
 
 The list of all defined parameters, their dafault values and dependency between different modules are described in 
@@ -190,7 +252,7 @@ This page gives information about module dependencies.
 
 @page compilation_page Setting up the case.
 
-@todo Update this description after upgrading arnoldi.
+@todo Update this description adding frame_usr_*** routines
 
 To set up the case one has to check module dependency of the main tool described in FRAMEWORK.txt. An example shows
 FRAMEWORK.txt file from [time stepper] (@ref tstepper) module:

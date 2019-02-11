@@ -25,18 +25,18 @@ be registered with it. For more information check [Toolbox page] (@ref toolbox).
 The top level direcotries in the framework point to stable release of three main github repositories (using 
 [git submodules] (https://git-scm.com/book/en/v2/Git-Tools-Submodules)): 
 - [Nek5000] (https://github.com/Nek5000/Nek5000),
-- [toolbox] (https://github.com/adampep/KTH_Toolbox),
-- [tool examples] (https://github.com/adampep/KTH_Examples).
+- [toolbox] (https://github.com/KTH-Nek5000/KTH_Toolbox),
+- [tool examples] (https://github.com/KTH-Nek5000/KTH_Examples).
 
 Each ot these repositories can be downloaded separately by executing
 @verbatim
 git clone https://github.com/Nek5000/Nek5000.git -b master
-git clone https://github.com/adampep/KTH_Toolbox -b master
-git clone https://github.com/adampep/KTH_Examples -b master
+git clone https://github.com/KTH-Nek5000/KTH_Toolbox -b master
+git clone https://github.com/KTH-Nek5000/KTH_Examples -b master
 @endverbatim
 or as a single framework by
 @verbatim
-git clone --recursive https://github.com/adampep/KTH_Framework
+git clone --recursive https://github.com/KTH-Nek5000/KTH_Framework
 @endverbatim 
 
 The second method is preferred as Nek5000 repository has neither development nor stable branches and all the 
@@ -252,7 +252,7 @@ This page gives information about module dependencies.
 
 @page compilation_page Setting up the case.
 
-@todo Update this description adding frame_usr_*** routines
+@todo This section is outdated. Update it.
 
 To set up the case one has to check module dependency of the main tool described in FRAMEWORK.txt. An example shows
 FRAMEWORK.txt file from [time stepper] (@ref tstepper) module:

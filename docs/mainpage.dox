@@ -252,51 +252,8 @@ This page gives information about module dependencies.
 
 @page compilation_page Setting up the case.
 
-@todo This section is outdated. Update it.
+@todo Add content
 
-To set up the case one has to check module dependency of the main tool described in FRAMEWORK.txt. An example shows
-FRAMEWORK.txt file from [time stepper] (@ref tstepper) module:
-@code{.txt}
-#List of existing submodules
-SUBMODULES arnildi_arpack \
-           powerit
-
-#List of conflicting submodules
-EXCLUSIVE arnoldi_arpack \
-          powerit
-
-#Default submodules
-DEFAULT arnoldi_arpack
-
-#List of conflicting modules
-CONFLICTS
-
-#List of required modules
-REQUIRED
-         
-#List of object files
-OBJECT time_stepper.o
-
-#List of include files
-INCLUDE TIME_STEPPERD
-@endcode
-
-This module contains two conflicting submodules @ref arnoldi_arpack and @ref powerit. To setup specific case 
-one has to check recursively dependency of all specified modules to get a complete list of required modules 
-and exclude possible conflicts. In the case of spectra calulation with \a PARPACK library one checks FRAMEWORK.txt 
-under \a tools/tstepper/arnoldi_arpack/ and finds that \a arnoldi_arpack depends on \a io/checkpoint/dummy and 
-\a io/io_tools. On the other had \a io/checkpoint/dummy depends on \a io/checkpoint, so the final list of 
-equired modules is:
-- \a tools/tstepper,
-- \a tools/tstepper/arnoldi_arpack/,
-- \a io/checkpoint,
-- \a io/checkpoint/dummy,
-- \a io/io_tools.
-
-Next one copies to the setup directory the source files listed in \a OBJECT and \a INCLUDE sections of 
-FRAMEWORK.txt of all required modules, and adds content of \a OBJECT to USR variable in makenek. The last 
-step before compilation is to concatenate makefile_usr.inc from requred modules' directories to generate
-makefile_usr.inc in the setup directory.
 
 @page developmnet_page Tool development workflow.
 

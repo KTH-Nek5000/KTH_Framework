@@ -228,7 +228,7 @@ TAB_SIZE = 4
 # "Side Effects:". You can put \n's in the value part of an alias to insert
 # newlines.
 
-ALIASES = "param_list=\xrefitem parameter_list_page \"Global parameter list\" \"\"" "param_reqr=\xrefitem parameter_required_page \"Global parameter dependency\" \"\"" "mod_interface=\par Module interface:\n" "mod_interface_example=\par Module interface usage:\n" "mod_param=\par Module parameters:\n" "mod_param_example=\par Module parameter usage:\n" "mod_var=\par Module memory structures:\n" "interface_list=\xrefitem interface_list_page \"Global interface list\" \"\"" "interface_reqr=\xrefitem interface_required_page \"Global interface dependency\" \"\""
+ALIASES = "param_list=\xrefitem parameter_list_page \"Global parameter list\" \"\"" "param_reqr=\xrefitem parameter_required_page \"Global parameter dependency\" \"\"" "mod_interface=\par Module interface:" "mod_interface_example=\par Module interface usage:" "mod_param=\par Module parameters:" "mod_param_example=\par Module parameter usage:" "mod_var=\par Module memory structures:" "interface_list=\xrefitem interface_list_page \"Global interface list\" \"\"" "interface_reqr=\xrefitem interface_required_page \"Global interface dependency\" \"\""
 
 # This tag can be used to specify a number of word-keyword mappings (TCL only).
 # A mapping has the form "name=value". For example adding "class=itcl::class"
@@ -281,7 +281,7 @@ OPTIMIZE_OUTPUT_VHDL = NO
 # Note that for custom extensions you also need to set FILE_PATTERNS otherwise
 # the files are not read by doxygen.
 
-EXTENSION_MAPPING = f90=FortranFree f=FortranFixed c=C h=C
+EXTENSION_MAPPING = f90=FortranFree f=FortranFixed usr=FortranFixed c=C h=C
 
 # If the MARKDOWN_SUPPORT tag is enabled then doxygen pre-processes all comments
 # according to the Markdown format, which allows for more readable
@@ -844,7 +844,7 @@ EXCLUDE_SYMBOLS =
 # that contain example code fragments that are included (see the \include
 # command).
 
-EXAMPLE_PATH = 
+EXAMPLE_PATH = ./
 
 # If the value of the EXAMPLE_PATH tag contains directories, you can use the
 # EXAMPLE_PATTERNS tag to specify one or more wildcard pattern (like *.cpp and

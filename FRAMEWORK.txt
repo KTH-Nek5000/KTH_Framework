@@ -3,6 +3,6 @@
 /**
 @defgroup framework  Framework for Nek5000 toolboxes
 
-@brief Framework for KHT toolboxes
+@brief KTH framework for Nek5000 toolboxes
 
 */

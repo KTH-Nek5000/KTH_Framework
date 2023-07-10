@@ -9,7 +9,7 @@
 This framework provides platform for development and shearing the tools based on [Nek5000] 
 (https://nek5000.mcs.anl.gov/) code. It contains number of utilities that allow Nek5000 users to perform 
 additional tasks. The main objective is to allow different users to exchange their code that is not 
-part of Nek5000 core but operates through standard user interface (mainly through \a userchk). 
+part of Nek5000 core but operates through standard user interface (mainly through @a userchk). 
 
 @section structure Framework structure
 To make this platform easy to expand and reuse existing code we introduce specific directory structure
@@ -71,8 +71,6 @@ It requires doxygen 1.8.11 or newer and the dot tool from [Graphviz] (http://www
 All files required by doxygen are located under ./docs/. It includes configuration file (Doxyfile), bibliography
 (doxy.bib) and web pages contents (mainpage.dox). 
 
-@todo Add possibility to generate documentation in KTH_Toolbox separately.
-
 
 
 
@@ -81,9 +79,9 @@ All files required by doxygen are located under ./docs/. It includes configurati
 @section rparam_file Runtime parameter file.
 An important issue for our framework is organised structure of runtime parameters that would allow for 
 simple modiffication of parameter list without introducing conflicts between different code parts.
-As old \a setup.rea file does not provide sufficent flexibility, all tool developers are obligated to use 
-new  \a setup.par file instead, as it organises runtime parameters by sections and in addition to 20 user
-parameters in \a [GENERAl] section allows to introduce user defined sections.
+As old @a ###.rea file does not provide sufficent flexibility, all tool developers are obligated to use 
+new @a ###.par file instead, as it organises runtime parameters by sections and in addition to 20 user
+parameters in @a [GENERAl] section allows to introduce user defined sections.
 Every section starting with underscore is treated as user section and its consistency is not checked by Nek5000
 core code. Following examples shows two native  Nek5000 sections and three user sections:
 @code{.txt}
@@ -144,18 +142,18 @@ IOSTEP               = 50
 @endcode
 
 @section rparam_module Module's runtime parameters.
-We utilize user defined sections in \a setup.par to set values of runtime parametes defined in different modules. 
+We utilize user defined sections in @a ###.par to set values of runtime parametes defined in different modules. 
 To simplify interaction between different tools the [frame] (@ref frame) module provides dynamical database of 
 all available runtime parameters in the framework. To provide requred information to the framework we introduce 
 the module registration phase and split if from the module intialistation. All these steps are performed by 
-[frame_start](@ref frame_start), which initialises the framework itself and next calls a user interface \a frame_usr_register. 
-This routine shoud be placed in \a setup.usr and contain calls to the module registration routines. The registration 
+[frame_start](@ref frame_start), which initialises the framework itself and next calls a user interface @a frame_usr_register. 
+This routine shoud be placed in @a ###.usr and contain calls to the module registration routines. The registration 
 of the module consists of signing up the module in the database followed by the runtime parameters definitions 
 (name, type, description and default value) and finalised with timers definitions. This information is used to check 
-consistency of the \a setup.par file and to fill in runtime parameter database. Next user defined \a frame_usr_init 
+consistency of the @a ###.par file and to fill in runtime parameter database. Next user defined @a frame_usr_init 
 is called by [frame_start](@ref frame_start). It initilises all the modules by calling their initialisation routines. 
 This operation consists of taking back updated values of runtime parameters from the database and performing requred 
-by the module addtional operations.  
+by the module addtional operations.
 
 Following example shows the way a statistics module is initialised:
 @code{.f90}
@@ -243,6 +241,8 @@ following pages:
 
 @page parameter_list_page List of runtime parameters provided by modules.
 
+@todo Doxygen doesn't seem to work properly with tables, so this page is empty now.
+
 @page parameter_required_page List of runtime parameters required by modules.
 
 This page gives information about module dependencies.
@@ -252,12 +252,69 @@ This page gives information about module dependencies.
 
 @page compilation_page Setting up the case.
 
-@todo Add content
+The creation of a Nek5000 setup using the framework starts with collecting information about required modules and their dependencies. The most important is a list 
+of provided and required interfaces for each of the modules. With a complete list of required modules, the user can build the setup's 
+@a makefile_usr.inc concatenating corresponding files from modules' home directories in the toolbox. Next, the @a compile_script has to be generated 
+and all the object files from @a makefile_usr.inc have to be included in @a USR variable. Please observe that the compilation script has to contain a call 
+to @a toolbox_path.sh. To make a source code complete one has to copy all the template Fortran77 include-files from the modules' home directories to 
+the setup directory, dropping the @a _template extension. The content of these files has to be checked and adjusted to the case needs. 
+Next, the calls to the appropriate interfaces of the used modules have to be added to @a ###.usr file. Most of them should be added to 
+the @a userchk subroutine, although in specific cases the other subroutines could be used as well. The most basic ones are calls to @ref frame_start, 
+@ref frame_monitor and @ref frame_end subroutines, which are interfaces of the @ref frame module.
+
+The last step before the compilation of the code is the generation of the user interfaces required by the used modules. The templates of these subroutines 
+can be found in @a example.usr files in modules' directories, but they should not be used directly without proper modification. Although this step is 
+very case-dependent, the @ref frame module is  obligatory, so at least three user subroutines have to be added to the @a ###.usr file. These 
+are @a frame_usr_register, @a frame_usr_init and @a frame_usr_end. They should contain calls to the modules' registration, initialisation and finalisation 
+routines respectively, and are required by @ref frame_start and @ref frame_end subroutines.
+
+To execute the code one needs the run-time parameter file @a ###.par which can be build based on @a example.par files located in modules' directories. 
+Notice that these files contain module-specific parameter sections, so the general Nek5000 run-time parameters have to be added separately. 
+Like all the other run-time parameters in Nek5000, the run-time parameters defined in the framework come with a default value and only those modified 
+have to be present in the @a ###.par file. For the log level smaller or equal @a lp_prd (6) the list of all the registered framework run-time 
+parameters can be found in the log file. We have to stress here, that the framework does not support the legacy run-time parameter file @a ###.rea.
+
+For more details, the user is directed to @a KTH_Examples repository containing examples of all the existing tools in the framework.
 
 
 @page developmnet_page Tool development workflow.
 
-@todo Describe code development workflow.
+External users can contribute to the framework in multiple ways including bug reporting and new tool implementation. As KTH_Toolbox} and KTH_Examples 
+are public repositories, it can be easily done using GitHub pull requests. There are a few requirements each tool has to fulfil to be added to 
+the repository. Each tool has to be written in Fortran77, has to be consistent with the framework modular structure and in an optimal way reuse 
+existing modules to avoid code duplication. The bigger tools that perform multiple operations should be split into smaller ones, if standalone utilities 
+could be extracted. It is important that the developers are familiar with [frame] (@ref frame) module, as all the registering, timing and logging 
+operations should be performed with interfaces provided by this module and its sub-modules.
+
+Building the new module starts with defining the tasks, splitting the code into possible sub-modules and placing them in KTH_Toolbox directory tree structure. 
+After the new directories are created, the @a toolbox_path.sh script located in the top toolbox directory should be updated and the new modules' 
+paths should be added. For each of the tools, dependency with other modules has to be clearly defined by identification of the provided and required interfaces. 
+There are at least three interfaces that have to be present for each module: subroutines providing module registration (@a ###_register) and 
+initialisation (@a ###_init), and a function returning the initialisation status (@a ###_is_initialised). A subroutine preforming module 
+finalisation (@a ###_end) is optional. A common practise is to also define a @a ###_main subroutine that could be called in @a userchk and would perform 
+all the tool's operations. We follow here a naming convention, where all module's routine and global variable names start with a module acronym marked in 
+this section as @a ###. This acronym is used as well by the framework logging system and allows to distinguish different modules' messages. 
+It is worth mentioning that there are exceptions and not all the modules contain registration and initialisation subroutines. Good examples are the @ref comm 
+and @ref math modules containing a set of useful routines, but not performing any specific tasks. These modules do not provide any run-time parameters 
+or timers, so there is no need to add them to @ref frame databases.
+
+A registration means adding to the framework databases a module itself together with all the required timers,  the run-time parameters and a run-time parameter 
+section, and receiving a unique identification number for each of the registered objects. Both modules and timers are registered in a tree-like structure and 
+have to provide their parent id. It simplifies writing a summary to the log file and allows to exhibit dependencies between modules. That is why registration 
+starts with finding the parent id for both the module and the timer. In the case of the run-time parameters, a default value has to be provided during 
+the registration step.
+
+On the other hand, the module initialisation starts with an update of the run-time parameter values followed by the tool-specific actions. The last step is marking 
+the initialisation to be completed by setting a module initialisation flag. The registration process requires a number of global variables to be defined, 
+as each of the identification numbers has to be stored. Unfortunately, Fortran77 does not provide variable encapsulation, so all these variables have to be 
+defined in common blocks. To make them available to other modules, the common blocks have to be declared in a separate Fortran77 include-file.
+
+The module's code has to be self-contained, so that together with the used sub-modules it provides all the required operations including e.g., writing and reading 
+tool-specific restart files. If the source code is present in the module, a template of compilation rules @a makefile_usr.inc has to be added. It has to use 
+paths defined in @a toolbox_path.sh. When the user interface or the run-time parameter is defined, the corresponding templates of @a example.usr or 
+@a example.par have to be present as well. Next, the general module documentation in @a FRAMEWORK.txt has to be generated. It should contain adequate 
+sections mentioned in [Toolbox page] (@ref toolbox) and clearly state module dependencies. The last step is the generation of a small example and adding 
+it to KTH_Examples repository. Existing modules and examples provide the best guidelines for building new tools.
 
 @page interface_list_page List of interfaces provided by modules.
 

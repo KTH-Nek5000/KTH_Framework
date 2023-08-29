@@ -289,11 +289,11 @@ operations should be performed with interfaces provided by this module and its s
 Building the new module starts with defining the tasks, splitting the code into possible sub-modules and placing them in KTH_Toolbox directory tree structure. 
 After the new directories are created, the @a toolbox_path.sh script located in the top toolbox directory should be updated and the new modules' 
 paths should be added. For each of the tools, dependency with other modules has to be clearly defined by identification of the provided and required interfaces. 
-There are at least three interfaces that have to be present for each module: subroutines providing module registration (@a ###_register) and 
-initialisation (@a ###_init), and a function returning the initialisation status (@a ###_is_initialised). A subroutine preforming module 
-finalisation (@a ###_end) is optional. A common practise is to also define a @a ###_main subroutine that could be called in @a userchk and would perform 
+There are at least three interfaces that have to be present for each module: subroutines providing module registration (@a \#\#\#_register) and 
+initialisation (@a \#\#\#_init), and a function returning the initialisation status (@a \#\#\#_is_initialised). A subroutine preforming module 
+finalisation (@a \#\#\#_end) is optional. A common practise is to also define a @a \#\#\#_main subroutine that could be called in @a userchk and would perform 
 all the tool's operations. We follow here a naming convention, where all module's routine and global variable names start with a module acronym marked in 
-this section as @a ###. This acronym is used as well by the framework logging system and allows to distinguish different modules' messages. 
+this section as @a \#\#\#. This acronym is used as well by the framework logging system and allows to distinguish different modules' messages. 
 It is worth mentioning that there are exceptions and not all the modules contain registration and initialisation subroutines. Good examples are the @ref comm 
 and @ref math modules containing a set of useful routines, but not performing any specific tasks. These modules do not provide any run-time parameters 
 or timers, so there is no need to add them to @ref frame databases.

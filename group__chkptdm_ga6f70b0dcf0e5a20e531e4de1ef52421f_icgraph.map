@@ -1,0 +1,4 @@
+<map id="chkpts_read" name="chkpts_read">
+<area shape="rect" id="node1" title="Dummy replacement for checkpoint reader." alt="" coords="152,5,253,32"/>
+<area shape="rect" id="node2" href="$group__chkpt.html#ga2d682999600b8303ea7c4850cb54c9ca" title="Main checkpoint interface." alt="" coords="5,5,104,32"/>
+</map>

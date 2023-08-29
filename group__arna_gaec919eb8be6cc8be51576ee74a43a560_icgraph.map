@@ -1,0 +1,6 @@
+<map id="arna_mfosv" name="arna_mfosv">
+<area shape="rect" id="node1" title="Write single Krylov vector to the file." alt="" coords="476,5,575,32"/>
+<area shape="rect" id="node2" href="$group__arna.html#ga341bba5ff555f8b9d3388bc7219495cc" title="Write procesor dependent data (long vectors)" alt="" coords="336,5,428,32"/>
+<area shape="rect" id="node3" href="$group__arna.html#gaebc5ed853afac5b8ca3c12fe17b1f816" title="Write restart files." alt="" coords="175,5,288,32"/>
+<area shape="rect" id="node4" href="$group__arna.html#ga61cd8777c90822cd29525e306f16879a" title="Create Krylov space, get Ritz values and restart stepper phase." alt="" coords="5,5,127,32"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="math_edgind" name="math_edgind">
+<area shape="rect" id="node1" title="Give bounds for loops to extract edge of a 3D element." alt="" coords="551,5,657,32"/>
+<area shape="rect" id="node2" href="$group__math.html#ga02eb40bed26d98d5ee0ff81595c927d4" title="Extract 3D element edge." alt="" coords="396,5,503,32"/>
+<area shape="rect" id="node3" href="$group__gsyem.html#ga81cd74a24cd24a30c3ca329fed5b78b4" title="Generate family information." alt="" coords="205,5,348,32"/>
+<area shape="rect" id="node4" href="$group__gsyem.html#ga8a102e9ce6a4aefd12f8103c3ebf397e" title="Generate mesh dependent information." alt="" coords="5,5,157,32"/>
+</map>

@@ -1,0 +1,10 @@
+<map id="Utility module" name="Utility module">
+<area shape="rect" id="node1" href="$group__math.html" title="Diverse tools for matht or data operations." alt="" coords="353,5,407,31"/>
+<area shape="rect" id="node2" href="$group__cnht.html" title="Conjugated heat transfer tools." alt="" coords="288,55,472,95"/>
+<area shape="rect" id="node3" title="Diverse utilities for toolboxes." alt="" coords="125,156,240,181"/>
+<area shape="rect" id="node5" href="$group__bcnd.html" title="Diverse tools related to applying boundary conditions." alt="" coords="306,119,454,159"/>
+<area shape="rect" id="node6" href="$group__grid.html" title="Diverse tools for manipulation of the grid." alt="" coords="329,184,431,209"/>
+<area shape="rect" id="node7" href="$group__comm.html" title="MPI communication wrappers." alt="" coords="293,233,467,259"/>
+<area shape="rect" id="node8" href="$group__forcing.html" title="Diverse tools related to forcing, adding noise or other solution modifications." alt="" coords="319,283,441,308"/>
+<area shape="rect" id="node4" href="$group__toolbox.html" title="Toolbox for Nek5000." alt="" coords="5,156,77,181"/>
+</map>

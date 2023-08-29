@@ -1,0 +1,5 @@
+<map id="dictionary_del" name="dictionary_del">
+<area shape="rect" id="node1" title="Delete a dictionary object." alt="" coords="189,31,304,57"/>
+<area shape="rect" id="node2" href="$iniparser_8c.html#a90549ee518523921886b74454ff872eb" title="Free all memory associated to an ini dictionary." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node3" href="$iniparser_8c.html#ab0be559bfb769224b3f1b75e26242a67" title="Parse an ini file and return an allocated dictionary object." alt="" coords="16,56,131,83"/>
+</map>

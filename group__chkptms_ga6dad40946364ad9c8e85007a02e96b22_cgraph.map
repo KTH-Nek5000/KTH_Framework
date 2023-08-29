@@ -1,0 +1,9 @@
+<map id="chkpts_init" name="chkpts_init">
+<area shape="rect" id="node1" title="Initialise multi&#45;file checkpoint routines." alt="" coords="5,31,99,57"/>
+<area shape="rect" id="node2" href="$group__mntr.html#ga4fd2fb5339a1f242f4900151dd84d1bf" title="Abort simulation." alt="" coords="147,5,241,32"/>
+<area shape="rect" id="node7" href="$group__mntr.html#ga19967e912d1d55605f4be8da607d9f63" title="Write warning message." alt="" coords="148,56,240,83"/>
+<area shape="rect" id="node3" href="$byte_8c.html#a2da8eeb074dfd3ffbfb3e9a4d301cda4" title=" " alt="" coords="303,5,355,32"/>
+<area shape="rect" id="node5" href="$group__mntr.html#ga5e38f68c331940087081bbdaf8534cff" title="Write log message." alt="" coords="289,56,369,83"/>
+<area shape="rect" id="node4" href="$comm__mpi_8f.html#acc8803a3787828530843112e0c48941b" title=" " alt="" coords="417,5,491,32"/>
+<area shape="rect" id="node6" href="$math_8f.html#a692155d1d2ec380a9fdb2d81ef221625" title=" " alt="" coords="425,56,483,83"/>
+</map>

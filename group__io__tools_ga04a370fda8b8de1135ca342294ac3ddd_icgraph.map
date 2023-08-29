@@ -1,0 +1,7 @@
+<map id="io_mfos" name="io_mfos">
+<area shape="rect" id="node1" title="Write single scalar to the file." alt="" coords="539,31,613,57"/>
+<area shape="rect" id="node2" href="$group__chkptms.html#ga5b92698099b1ca5e62d47a8a96dfadee" title="Write field to the file." alt="" coords="380,31,491,57"/>
+<area shape="rect" id="node3" href="$group__chkptms.html#ga654d70b685d830ac8cdf030fefb6d29e" title="Write checkpoint snapshot." alt="" coords="164,31,332,57"/>
+<area shape="rect" id="node4" href="$group__chkptms.html#ga5a1a5e27f3cc18d976b7ca6f0ac4bcba" title="Write full file restart set." alt="" coords="8,5,113,32"/>
+<area shape="rect" id="node5" href="$group__pwit.html#gae25b7393d77e1cd5139cd60f0672b4b5" title="Write restart files." alt="" coords="5,56,116,83"/>
+</map>

@@ -1,0 +1,52 @@
+<map id="mntr_logi" name="mntr_logi">
+<area shape="rect" id="node1" title="Write log message adding single integer." alt="" coords="725,652,809,679"/>
+<area shape="rect" id="node2" href="$group__arna.html#ga92336b78d39b79927d02da92c50523a2" title="ARPACK postprocessing." alt="" coords="553,196,655,223"/>
+<area shape="rect" id="node4" href="$group__tstpr.html#ga5d4f30a0feb1064c7576467bca77b693" title="Control time stepper after every nek5000 step and call suitable stepper_vsolve of required submodule." alt="" coords="5,83,97,109"/>
+<area shape="rect" id="node5" href="$group__arna.html#ga5b8865f4da51ebc88d3d1c69c482f5e3" title="Read procesor dependent data (long vectors)" alt="" coords="560,297,648,324"/>
+<area shape="rect" id="node7" href="$group__arna.html#gac56f63bdb958fdc41a3e2feef5013eb6" title="Initilise Arnoldi ARPACK module." alt="" coords="157,272,255,299"/>
+<area shape="rect" id="node8" href="$group__arna.html#ga341bba5ff555f8b9d3388bc7219495cc" title="Write procesor dependent data (long vectors)" alt="" coords="558,95,650,121"/>
+<area shape="rect" id="node9" href="$group__arna.html#gaebc5ed853afac5b8ca3c12fe17b1f816" title="Write restart files." alt="" coords="342,120,455,147"/>
+<area shape="rect" id="node10" href="$group__arna.html#gaf05d7cebd4c16daede526a8c798f7303" title="Read procesor independent data." alt="" coords="547,348,661,375"/>
+<area shape="rect" id="node11" href="$group__chkptms.html#ga341f4983e4ed93bd836259996798b629" title="Read field to the file." alt="" coords="551,399,657,425"/>
+<area shape="rect" id="node13" href="$group__chkptms.html#ga5b92698099b1ca5e62d47a8a96dfadee" title="Write field to the file." alt="" coords="549,449,659,476"/>
+<area shape="rect" id="node15" href="$group__gsyem.html#ga0fe0bd65c50b2aa533cfbaf6560e0dfb" title="Advect/recycle eddies (gsyem_mode.eq.1) for a given family." alt="" coords="331,525,467,552"/>
+<area shape="rect" id="node17" href="$group__gsyem.html#ga81cd74a24cd24a30c3ca329fed5b78b4" title="Generate family information." alt="" coords="533,703,675,729"/>
+<area shape="rect" id="node20" href="$group__gsyem.html#ga68f8514481f8b7e4f0921092ca72863c" title="Inital generation of all eddies (gsyem_mode.eq.1) for a given family." alt="" coords="335,601,463,628"/>
+<area shape="rect" id="node21" href="$group__gsyem.html#ga847ecf1cfc1ff54c4948c05642d06bd2" title="Generate eddies from the list for a given family." alt="" coords="538,551,670,577"/>
+<area shape="rect" id="node22" href="$group__gsyem.html#ga65ba0f60250b148fd52ee1d1364eb5bb" title="Inital generation of all modes (gsyem_mode.eq.3) for a given family." alt="" coords="537,652,671,679"/>
+<area shape="rect" id="node23" href="$group__map2d.html#gaa375386064e3bde909740b212e59419a" title="Get 3D to 2D element mapping." alt="" coords="351,753,446,780"/>
+<area shape="rect" id="node25" href="$group__map2d.html#ga24f927a4ec0f97af941208dfb5f12bd0" title="Get global 3D=&gt;2D mapping." alt="" coords="533,804,675,831"/>
+<area shape="rect" id="node26" href="$group__pstat2d.html#ga92ac0308eb486a78d6b219666c91eb37" title="Manipulate mesh to get proper AMR refinement." alt="" coords="531,855,677,881"/>
+<area shape="rect" id="node28" href="$group__pstat2d.html#gad53744ddbcb6daaa991559faa65fb887" title="Read interpolation points position and redistribute them." alt="" coords="531,905,677,932"/>
+<area shape="rect" id="node31" href="$group__pstat2d.html#gabcd15769d3efb235456125872e81b712" title="Read in fields and average them." alt="" coords="540,956,668,983"/>
+<area shape="rect" id="node32" href="$group__pstat3d.html#ga1b50db9b35ecb1228d13238a426bf697" title="Read interpolation points position and redistribute them." alt="" coords="531,1007,677,1033"/>
+<area shape="rect" id="node34" href="$group__rprm.html#gac4d4e37bd7bfbeb6521d7f3ddae634e9" title="Register new runtime parameter." alt="" coords="553,1159,655,1185"/>
+<area shape="rect" id="node47" href="$group__sfd.html#gab838b3ce1a43844a03dcb6f578d9ff02" title="Load SFD restart file." alt="" coords="569,1209,639,1236"/>
+<area shape="rect" id="node48" href="$group__sfd.html#ga98e882dcaf69a8ff2ccaf8c2a27ebf45" title="Store SFD restart file." alt="" coords="567,1260,641,1287"/>
+<area shape="rect" id="node49" href="$group__tripl.html#gafa9770b465a7ed852f178de153efa435" title="Initilise tripping module." alt="" coords="566,1311,642,1337"/>
+<area shape="rect" id="node50" href="$group__tsrs.html#ga0d7968f354a79f43f2e1e67b57bfdc94" title="Read interpolation points positions, number and redistribute them." alt="" coords="543,1361,665,1388"/>
+<area shape="rect" id="node3" href="$group__arna.html#ga61cd8777c90822cd29525e306f16879a" title="Create Krylov space, get Ritz values and restart stepper phase." alt="" coords="145,120,267,147"/>
+<area shape="rect" id="node6" href="$group__arna.html#gadf15bdeac3661b9dc0b5f461f8c5287e" title="Read from checkpoints." alt="" coords="343,297,454,324"/>
+<area shape="rect" id="node12" href="$group__chkptms.html#ga3794aff55627f45933b4610e180177f9" title="Read checkpoint snapshot." alt="" coords="317,399,481,425"/>
+<area shape="rect" id="node14" href="$group__chkptms.html#ga654d70b685d830ac8cdf030fefb6d29e" title="Write checkpoint snapshot." alt="" coords="315,449,483,476"/>
+<area shape="rect" id="node16" href="$group__gsyem.html#ga36b63ec7f01ee16a54a05a0d8a3dfbee" title="Time evolution of eddies." alt="" coords="147,525,265,552"/>
+<area shape="rect" id="node18" href="$group__gsyem.html#ga8a102e9ce6a4aefd12f8103c3ebf397e" title="Generate mesh dependent information." alt="" coords="323,703,475,729"/>
+<area shape="rect" id="node19" href="$group__gsyem.html#ga73294eaccf8e6a4700f60e62754c5a30" title="Initilise gSyEM module." alt="" coords="159,652,253,679"/>
+<area shape="rect" id="node24" href="$group__map2d.html#ga447f2d8044a3b5c731f50a830b532578" title="Initilise map2d module." alt="" coords="159,753,253,780"/>
+<area shape="rect" id="node27" href="$group__pstat2d.html#ga0da79899b2190d60ea1954710fab1b96" title="Initilise pstat module." alt="" coords="349,804,448,831"/>
+<area shape="rect" id="node29" href="$group__pstat2d.html#ga2fb9814b49b683cb4d4dc71b37bea41d" title="Interpolate int the set of points." alt="" coords="341,855,457,881"/>
+<area shape="rect" id="node30" href="$group__pstat2d.html#gaad68c82ca1e788e4c8cbe540edf3498f" title="Main interface of pstat module." alt="" coords="151,880,261,907"/>
+<area shape="rect" id="node33" href="$group__pstat3d.html#ga502b782584e1e099b2d6631aaaf95044" title="Interpolate int the set of points." alt="" coords="341,956,457,983"/>
+<area shape="rect" id="node35" href="$group__chkpt.html#gab4a17862a5f644ef26e2538240fc3ae8" title="Register checkpointing module." alt="" coords="341,1007,456,1033"/>
+<area shape="rect" id="node36" href="$group__cnht.html#ga379358bcb1b26f19a8d6ce42ee8cafce" title="Register conjugated heat transfer tools module." alt="" coords="345,1057,452,1084"/>
+<area shape="rect" id="node37" href="$group__gsyem.html#ga17580b482424f50acc5bac11aae995e9" title="Register gSyEM module." alt="" coords="337,1108,460,1135"/>
+<area shape="rect" id="node38" href="$group__mntr.html#gad8a160fa3c099342abc581c5073a5744" title="Register monitor runtime parameters." alt="" coords="329,1159,468,1185"/>
+<area shape="rect" id="node39" href="$group__nseb.html#gabff51957fc953dc6a5c13ab63a47db53" title="Register noise box module." alt="" coords="343,1209,454,1236"/>
+<area shape="rect" id="node40" href="$group__pstat2d.html#ga9604529cd2a9968ca4b6ab56b1008cd0" title="Register post processing statistics module." alt="" coords="335,1260,463,1287"/>
+<area shape="rect" id="node41" href="$group__pstat3d.html#ga57ee81eac3a2bb49d17a60b5d8e607b0" title="Register post processing statistics module." alt="" coords="335,1311,463,1337"/>
+<area shape="rect" id="node42" href="$group__rprm.html#ga0a358e8c1cfec90802d0529ace7bcd4e" title="Register runtime parameters database." alt="" coords="343,1361,454,1388"/>
+<area shape="rect" id="node43" href="$group__sfd.html#ga43ee3323c9f0a245a97af5985a675042" title="Register SFD module." alt="" coords="349,1412,448,1439"/>
+<area shape="rect" id="node44" href="$group__spnb.html#gad0b11484a305e9166b865f97058b1bff" title="Register sponge box module." alt="" coords="343,1463,454,1489"/>
+<area shape="rect" id="node45" href="$group__stat.html#ga5b0d78dee858f1d9efcd6ce57aeb5ec8" title="Register 2D and 3D statistics module." alt="" coords="347,1513,451,1540"/>
+<area shape="rect" id="node46" href="$group__arna.html#ga0090b5720eddacfd07206629455fee38" title="Register Arnoldi ARPACK module." alt="" coords="335,1564,463,1591"/>
+</map>

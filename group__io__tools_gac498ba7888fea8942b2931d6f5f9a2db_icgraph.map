@@ -1,0 +1,23 @@
+<map id="io_mbyte_close" name="io_mbyte_close">
+<area shape="rect" id="node1" title="Close field file." alt="" coords="549,183,673,209"/>
+<area shape="rect" id="node2" href="$group__arna.html#ga5b8865f4da51ebc88d3d1c69c482f5e3" title="Read procesor dependent data (long vectors)" alt="" coords="402,19,490,45"/>
+<area shape="rect" id="node5" href="$group__arna.html#ga341bba5ff555f8b9d3388bc7219495cc" title="Write procesor dependent data (long vectors)" alt="" coords="400,81,492,108"/>
+<area shape="rect" id="node8" href="$group__chkptms.html#ga341f4983e4ed93bd836259996798b629" title="Read field to the file." alt="" coords="393,157,499,184"/>
+<area shape="rect" id="node12" href="$group__chkptms.html#ga5b92698099b1ca5e62d47a8a96dfadee" title="Write field to the file." alt="" coords="391,208,501,235"/>
+<area shape="rect" id="node16" href="$group__sfd.html#gab838b3ce1a43844a03dcb6f578d9ff02" title="Load SFD restart file." alt="" coords="411,271,481,297"/>
+<area shape="rect" id="node19" href="$group__sfd.html#ga98e882dcaf69a8ff2ccaf8c2a27ebf45" title="Store SFD restart file." alt="" coords="409,328,483,355"/>
+<area shape="rect" id="node3" href="$group__arna.html#gadf15bdeac3661b9dc0b5f461f8c5287e" title="Read from checkpoints." alt="" coords="203,12,314,39"/>
+<area shape="rect" id="node4" href="$group__arna.html#gac56f63bdb958fdc41a3e2feef5013eb6" title="Initilise Arnoldi ARPACK module." alt="" coords="17,5,115,32"/>
+<area shape="rect" id="node6" href="$group__arna.html#gaebc5ed853afac5b8ca3c12fe17b1f816" title="Write restart files." alt="" coords="202,81,315,108"/>
+<area shape="rect" id="node7" href="$group__arna.html#ga61cd8777c90822cd29525e306f16879a" title="Create Krylov space, get Ritz values and restart stepper phase." alt="" coords="5,56,127,83"/>
+<area shape="rect" id="node9" href="$group__chkptms.html#ga3794aff55627f45933b4610e180177f9" title="Read checkpoint snapshot." alt="" coords="177,157,341,184"/>
+<area shape="rect" id="node10" href="$group__chkptms.html#gac43d874790794f7a13bdbbd72e6e4f5a" title="Read full file restart set." alt="" coords="15,107,117,133"/>
+<area shape="rect" id="node11" href="$group__pwit.html#gadebf99ef8b12430e2fb793802cb08b78" title="Read restart files." alt="" coords="13,157,119,184"/>
+<area shape="rect" id="node13" href="$group__chkptms.html#ga654d70b685d830ac8cdf030fefb6d29e" title="Write checkpoint snapshot." alt="" coords="175,208,343,235"/>
+<area shape="rect" id="node14" href="$group__chkptms.html#ga5a1a5e27f3cc18d976b7ca6f0ac4bcba" title="Write full file restart set." alt="" coords="13,208,119,235"/>
+<area shape="rect" id="node15" href="$group__pwit.html#gae25b7393d77e1cd5139cd60f0672b4b5" title="Write restart files." alt="" coords="11,259,121,285"/>
+<area shape="rect" id="node17" href="$group__sfd.html#ga661b879094c4984defe82100decd8cdb" title="Read from checkpoint." alt="" coords="207,284,310,311"/>
+<area shape="rect" id="node18" href="$group__sfd.html#gaedfae65d8524e7c3e3027e5fcca5e365" title="Initialise SFD module." alt="" coords="31,309,101,336"/>
+<area shape="rect" id="node20" href="$group__sfd.html#ga89991c1aeab15b83507d645abf1180ac" title="Create checkpoint." alt="" coords="205,347,312,373"/>
+<area shape="rect" id="node21" href="$group__sfd.html#ga0b6632977093e8240081e63a4581ae7a" title="Main SFD interface." alt="" coords="25,360,107,387"/>
+</map>

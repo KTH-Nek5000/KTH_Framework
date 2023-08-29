@@ -1,0 +1,36 @@
+<map id="byte_read_mpi" name="byte_read_mpi">
+<area shape="rect" id="node1" title=" " alt="" coords="697,346,816,373"/>
+<area shape="rect" id="node2" href="$gfldr_8f.html#a8063d81abe16aa8f96b77bea36344fee" title=" " alt="" coords="366,42,418,69"/>
+<area shape="rect" id="node3" href="$gfldr_8f.html#adb6937d6448c9fc1c201f07b980c7a52" title=" " alt="" coords="525,42,622,69"/>
+<area shape="rect" id="node4" href="$gfldr_8f.html#a1e409ae15930f652f9263b1f81e93f1a" title=" " alt="" coords="522,93,625,119"/>
+<area shape="rect" id="node5" href="$group__io__tools.html#gae2886b4430e6ec78e4696156f6f8bab1" title="Read scalar filed from the file." alt="" coords="538,143,609,170"/>
+<area shape="rect" id="node8" href="$group__io__tools.html#gaea4102ef228596ebbd34c34ed8aac4eb" title="Read vector filed from the file." alt="" coords="538,194,609,221"/>
+<area shape="rect" id="node11" href="$lpm__io_8f.html#aff8b9e0edcc9ee3b52b059b3607f4568" title=" " alt="" coords="522,447,625,474"/>
+<area shape="rect" id="node12" href="$lpm__io_8f.html#a5704f3858783e98ee189803d001888b7" title=" " alt="" coords="497,498,649,525"/>
+<area shape="rect" id="node13" href="$ic_8f.html#af9f00a786901a7600e636f294a42bd09" title=" " alt="" coords="534,295,613,322"/>
+<area shape="rect" id="node22" href="$ic_8f.html#af68df198916be2ecb6058327311ac3b6" title=" " alt="" coords="533,346,613,373"/>
+<area shape="rect" id="node23" href="$ic_8f.html#afe51926a02c40e95936541ed859b1790" title=" " alt="" coords="523,245,624,271"/>
+<area shape="rect" id="node24" href="$group__pstat2d.html#ga2797c82626033b1e7d998de1433c3df8" title="Read nonconforming data from the file." alt="" coords="502,397,645,423"/>
+<area shape="rect" id="node26" href="$map2_8f.html#a114f983b362bec57e45b4bf1f50111e6" title=" " alt="" coords="533,549,614,575"/>
+<area shape="rect" id="node29" href="$reader__re2_8f.html#ad228b1fac7ff420bfe70b262d5a0e194" title=" " alt="" coords="519,701,628,727"/>
+<area shape="rect" id="node33" href="$reader__re2_8f.html#af82be0a4640478fb71830438aa8ec541" title=" " alt="" coords="508,650,639,677"/>
+<area shape="rect" id="node34" href="$reader__re2_8f.html#a65d8b07118d6d0b29b9bc92b506b8906" title=" " alt="" coords="508,599,639,626"/>
+<area shape="rect" id="node6" href="$group__chkptms.html#ga341f4983e4ed93bd836259996798b629" title="Read field to the file." alt="" coords="339,143,445,170"/>
+<area shape="rect" id="node7" href="$group__chkptms.html#ga3794aff55627f45933b4610e180177f9" title="Read checkpoint snapshot." alt="" coords="123,143,287,170"/>
+<area shape="rect" id="node9" href="$group__sfd.html#gab838b3ce1a43844a03dcb6f578d9ff02" title="Load SFD restart file." alt="" coords="357,194,427,221"/>
+<area shape="rect" id="node10" href="$group__sfd.html#ga661b879094c4984defe82100decd8cdb" title="Read from checkpoint." alt="" coords="153,194,256,221"/>
+<area shape="rect" id="node14" href="$group__arna.html#gaa3c012f450e57742a0f9a5871bab3c01" title="Read single Krylov vector from the file." alt="" coords="345,295,439,322"/>
+<area shape="rect" id="node16" href="$ic_8f.html#a05e0886b196049bac2d39b9d500a70d1" title=" " alt="" coords="370,346,414,373"/>
+<area shape="rect" id="node15" href="$group__arna.html#ga5b8865f4da51ebc88d3d1c69c482f5e3" title="Read procesor dependent data (long vectors)" alt="" coords="161,245,249,271"/>
+<area shape="rect" id="node17" href="$navier1_8f.html#a38ba376801cfa958294fae8c90db7680" title=" " alt="" coords="5,371,75,398"/>
+<area shape="rect" id="node18" href="$navier1_8f.html#a89c10bd50bd97a18d935319a486720c1" title=" " alt="" coords="166,447,243,474"/>
+<area shape="rect" id="node19" href="$group__pstat2d.html#gabcd15769d3efb235456125872e81b712" title="Read in fields and average them." alt="" coords="141,498,269,525"/>
+<area shape="rect" id="node20" href="$group__pstat3d.html#gaae3e0ff68dced9bcec011097e8385eb0" title="Read in fields and average them." alt="" coords="141,346,269,373"/>
+<area shape="rect" id="node21" href="$ic_8f.html#a32489501c226ee8536f0fca3ac1b1b48" title=" " alt="" coords="172,397,237,423"/>
+<area shape="rect" id="node25" href="$group__pstat2d.html#ga0da79899b2190d60ea1954710fab1b96" title="Initilise pstat module." alt="" coords="343,447,441,474"/>
+<area shape="rect" id="node27" href="$map2_8f.html#ad7e6baf5b27258e1eaa5451ff2265b18" title=" " alt="" coords="336,561,448,587"/>
+<area shape="rect" id="node28" href="$map2_8f.html#a3126acd6d2b7a3e63f6f0329d5bae424" title=" " alt="" coords="167,561,243,587"/>
+<area shape="rect" id="node30" href="$reader__re2_8f.html#afebb243824e6845e99b2f86817b84a71" title=" " alt="" coords="335,650,449,677"/>
+<area shape="rect" id="node31" href="$connect2_8f.html#a909eeac6dfc8f61a1c9d637c53cc970d" title=" " alt="" coords="8,662,72,689"/>
+<area shape="rect" id="node32" href="$reader__par_8f.html#a69b75d22fcf18a6c1038825b9f53bdb8" title=" " alt="" coords="159,687,251,714"/>
+</map>

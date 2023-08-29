@@ -1,0 +1,16 @@
+<map id="mntr_tmr_is_name_reg" name="mntr_tmr_is_name_reg">
+<area shape="rect" id="node1" title="Check if timer name is registered and return its id." alt="" coords="333,309,507,336"/>
+<area shape="rect" id="node2" href="$group__chkpt.html#gab4a17862a5f644ef26e2538240fc3ae8" title="Register checkpointing module." alt="" coords="164,5,279,32"/>
+<area shape="rect" id="node3" href="$group__chkptms.html#ga358b78dddcfafe899999554af7bc032c" title="Register multi step checkpointing module." alt="" coords="160,56,283,83"/>
+<area shape="rect" id="node4" href="$group__gsyem.html#ga17580b482424f50acc5bac11aae995e9" title="Register gSyEM module." alt="" coords="160,107,283,133"/>
+<area shape="rect" id="node5" href="$group__map2d.html#ga10b83d80eef816db2eeac964d3dde0f3" title="Register 2D mapping routines." alt="" coords="159,157,283,184"/>
+<area shape="rect" id="node6" href="$group__stat.html#ga5b0d78dee858f1d9efcd6ce57aeb5ec8" title="Register 2D and 3D statistics module." alt="" coords="5,183,109,209"/>
+<area shape="rect" id="node7" href="$group__nseb.html#gabff51957fc953dc6a5c13ab63a47db53" title="Register noise box module." alt="" coords="166,259,277,285"/>
+<area shape="rect" id="node8" href="$group__pstat2d.html#ga9604529cd2a9968ca4b6ab56b1008cd0" title="Register post processing statistics module." alt="" coords="157,309,285,336"/>
+<area shape="rect" id="node9" href="$group__pstat3d.html#ga57ee81eac3a2bb49d17a60b5d8e607b0" title="Register post processing statistics module." alt="" coords="157,360,285,387"/>
+<area shape="rect" id="node10" href="$group__sfd.html#ga43ee3323c9f0a245a97af5985a675042" title="Register SFD module." alt="" coords="172,411,271,437"/>
+<area shape="rect" id="node11" href="$group__spnb.html#gad0b11484a305e9166b865f97058b1bff" title="Register sponge box module." alt="" coords="166,461,277,488"/>
+<area shape="rect" id="node12" href="$group__tripl.html#ga1dc604a8ceab9cd3224b9ea87ff9695a" title="Register tripping module." alt="" coords="169,512,274,539"/>
+<area shape="rect" id="node13" href="$group__tsrs.html#ga2503e0d3cf50ec1b8a70c786c46a27d3" title="Register point time seriesmodule for statistics tool." alt="" coords="170,563,273,589"/>
+<area shape="rect" id="node14" href="$group__tstpr.html#gaf8a76407467c7934f804e54ffb2e4227" title="Register time stepper module." alt="" coords="167,613,276,640"/>
+</map>

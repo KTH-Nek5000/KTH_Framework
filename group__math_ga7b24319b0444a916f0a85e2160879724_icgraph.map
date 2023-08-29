@@ -1,0 +1,7 @@
+<map id="math_rot3da" name="math_rot3da">
+<area shape="rect" id="node1" title="3D rotation of a vector along given axis." alt="" coords="539,31,644,57"/>
+<area shape="rect" id="node2" href="$group__gsyem.html#ga81cd74a24cd24a30c3ca329fed5b78b4" title="Generate family information." alt="" coords="348,5,491,32"/>
+<area shape="rect" id="node5" href="$group__tripl.html#gafa9770b465a7ed852f178de153efa435" title="Initilise tripping module." alt="" coords="381,56,457,83"/>
+<area shape="rect" id="node3" href="$group__gsyem.html#ga8a102e9ce6a4aefd12f8103c3ebf397e" title="Generate mesh dependent information." alt="" coords="148,5,300,32"/>
+<area shape="rect" id="node4" href="$group__gsyem.html#ga73294eaccf8e6a4700f60e62754c5a30" title="Initilise gSyEM module." alt="" coords="5,5,100,32"/>
+</map>

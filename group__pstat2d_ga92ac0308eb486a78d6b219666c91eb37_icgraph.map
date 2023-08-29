@@ -1,0 +1,4 @@
+<map id="pstat2d_mesh_amr" name="pstat2d_mesh_amr">
+<area shape="rect" id="node1" title="Manipulate mesh to get proper AMR refinement." alt="" coords="152,5,299,32"/>
+<area shape="rect" id="node2" href="$group__pstat2d.html#ga0da79899b2190d60ea1954710fab1b96" title="Initilise pstat module." alt="" coords="5,5,104,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="tripl_rphs_get" name="tripl_rphs_get">
+<area shape="rect" id="node1" title="Generate set of random phases." alt="" coords="153,31,264,57"/>
+<area shape="rect" id="node2" href="$group__tripl.html#gafa9770b465a7ed852f178de153efa435" title="Initilise tripping module." alt="" coords="17,5,93,32"/>
+<area shape="rect" id="node3" href="$group__tripl.html#ga31ec6216f507e798c3fc3d3429429105" title="Update tripping." alt="" coords="5,56,105,83"/>
+</map>

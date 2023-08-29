@@ -1,0 +1,12 @@
+<map id="rprm_sec_reg" name="rprm_sec_reg">
+<area shape="rect" id="node1" title="Register new parameter section." alt="" coords="5,132,116,159"/>
+<area shape="rect" id="node2" href="$comm__mpi_8f.html#ae425c1deb2e82d2007c97e1c4be990c8" title=" " alt="" coords="210,5,267,32"/>
+<area shape="rect" id="node4" href="$math_8f.html#a692155d1d2ec380a9fdb2d81ef221625" title=" " alt="" coords="506,120,565,147"/>
+<area shape="rect" id="node5" href="$ic_8f.html#a65a25147f7d5423171da71200182a19b" title=" " alt="" coords="211,107,266,133"/>
+<area shape="rect" id="node6" href="$group__mntr.html#ga4fd2fb5339a1f242f4900151dd84d1bf" title="Abort simulation." alt="" coords="191,259,286,285"/>
+<area shape="rect" id="node9" href="$group__mntr.html#ga5e38f68c331940087081bbdaf8534cff" title="Write log message." alt="" coords="366,183,446,209"/>
+<area shape="rect" id="node10" href="$group__mntr.html#ga33e34a4a3b46c645a315d0ab4988b55e" title="Get module name an parent id for given module id. This operation is performed locally." alt="" coords="164,208,313,235"/>
+<area shape="rect" id="node3" href="$mpi__dummy_8f.html#ae0bd4baaea848988f45664ce0de33350" title=" " alt="" coords="361,5,451,32"/>
+<area shape="rect" id="node7" href="$byte_8c.html#a2da8eeb074dfd3ffbfb3e9a4d301cda4" title=" " alt="" coords="380,259,432,285"/>
+<area shape="rect" id="node8" href="$comm__mpi_8f.html#acc8803a3787828530843112e0c48941b" title=" " alt="" coords="499,259,572,285"/>
+</map>

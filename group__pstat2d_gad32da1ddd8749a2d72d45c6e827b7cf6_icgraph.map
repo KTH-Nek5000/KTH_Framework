@@ -1,0 +1,7 @@
+<map id="pstat2d_mesh_map" name="pstat2d_mesh_map">
+<area shape="rect" id="node1" title="Find mapping of sts mesh to the existing in the run." alt="" coords="359,31,509,57"/>
+<area shape="rect" id="node2" href="$group__pstat2d.html#ga92ac0308eb486a78d6b219666c91eb37" title="Manipulate mesh to get proper AMR refinement." alt="" coords="164,5,311,32"/>
+<area shape="rect" id="node4" href="$group__pstat2d.html#gabcd15769d3efb235456125872e81b712" title="Read in fields and average them." alt="" coords="173,56,301,83"/>
+<area shape="rect" id="node3" href="$group__pstat2d.html#ga0da79899b2190d60ea1954710fab1b96" title="Initilise pstat module." alt="" coords="11,5,110,32"/>
+<area shape="rect" id="node5" href="$group__pstat2d.html#gaad68c82ca1e788e4c8cbe540edf3498f" title="Main interface of pstat module." alt="" coords="5,56,116,83"/>
+</map>

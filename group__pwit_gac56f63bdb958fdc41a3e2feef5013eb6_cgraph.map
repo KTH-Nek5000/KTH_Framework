@@ -1,0 +1,43 @@
+<map id="stepper_init" name="stepper_init">
+<area shape="rect" id="node1" title="Initilise power iteration module." alt="" coords="5,360,104,387"/>
+<area shape="rect" id="node2" href="$math_8f.html#ad2b51b68d370651f4f6d81952503e7be" title=" " alt="" coords="367,31,426,57"/>
+<area shape="rect" id="node3" href="$group__cnht.html#ga5f8cdaf690e79e2e3b1787879bf39b2b" title="Multiply vector by constant A = c*A (single coeff. for velocity and temperature)" alt="" coords="154,5,265,32"/>
+<area shape="rect" id="node4" href="$group__cnht.html#ga16450fa2fb3a38f287374dcfd2a7b171" title="Copy vectors A=B (velocity and temperature)" alt="" coords="157,360,261,387"/>
+<area shape="rect" id="node6" href="$group__mntr.html#ga4fd2fb5339a1f242f4900151dd84d1bf" title="Abort simulation." alt="" coords="544,664,639,691"/>
+<area shape="rect" id="node9" href="$group__mntr.html#ga5e38f68c331940087081bbdaf8534cff" title="Write log message." alt="" coords="931,360,1011,387"/>
+<area shape="rect" id="node11" href="$group__mntr.html#gace23caf3364c03dfa97a87212382b41a" title="Abort simulation." alt="" coords="724,740,863,767"/>
+<area shape="rect" id="node12" href="$group__mntr.html#ga1706f7a9b56366c2f646ff1e49a347dd" title="Write log message adding single real." alt="" coords="751,537,836,564"/>
+<area shape="rect" id="node13" href="$group__mntr.html#ga269486082a4638007da6211cc7b5e7c5" title="Check if module name is registered and return its id." alt="" coords="704,81,883,108"/>
+<area shape="rect" id="node17" href="$group__mntr.html#ga214aa24b6e79b5d041c124701ca13d8b" title="Check if timer id is registered. This operation is performed locally." alt="" coords="152,259,267,285"/>
+<area shape="rect" id="node18" href="$group__mntr.html#ga19967e912d1d55605f4be8da607d9f63" title="Write warning message." alt="" coords="351,411,443,437"/>
+<area shape="rect" id="node19" href="$group__rprm.html#ga8fdb351c474a7a91078f1839b6889a74" title="Get runtime parameter form active section. This operation is performed locally." alt="" coords="159,588,260,615"/>
+<area shape="rect" id="node20" href="$group__rprm.html#ga2b21fc1b5a753233af599fc4c9746af1" title="Check if parameter name is registered and return its id. Check flags as well." alt="" coords="712,183,875,209"/>
+<area shape="rect" id="node21" href="$group__rprm.html#gab392710d0bba8720e60d190aff199693" title="Check if section name is registered and return its id. Check mid as well." alt="" coords="707,132,879,159"/>
+<area shape="rect" id="node22" href="$group__pwit.html#gadebf99ef8b12430e2fb793802cb08b78" title="Read restart files." alt="" coords="156,639,263,665"/>
+<area shape="rect" id="node31" href="$group__tstpr.html#gacc057288b77ad9b321464ec5347211e3" title="Average velocity and temperature at element faces." alt="" coords="158,1145,261,1172"/>
+<area shape="rect" id="node5" href="$math_8f.html#a3b43508554f14bdea8e14473d7d0803c" title=" " alt="" coords="767,436,820,463"/>
+<area shape="rect" id="node7" href="$byte_8c.html#a2da8eeb074dfd3ffbfb3e9a4d301cda4" title=" " alt="" coords="945,715,997,741"/>
+<area shape="rect" id="node8" href="$comm__mpi_8f.html#acc8803a3787828530843112e0c48941b" title=" " alt="" coords="1067,715,1140,741"/>
+<area shape="rect" id="node10" href="$math_8f.html#a692155d1d2ec380a9fdb2d81ef221625" title=" " alt="" coords="1074,233,1133,260"/>
+<area shape="rect" id="node14" href="$comm__mpi_8f.html#ae425c1deb2e82d2007c97e1c4be990c8" title=" " alt="" coords="942,81,999,108"/>
+<area shape="rect" id="node16" href="$ic_8f.html#a65a25147f7d5423171da71200182a19b" title=" " alt="" coords="943,183,998,209"/>
+<area shape="rect" id="node15" href="$mpi__dummy_8f.html#ae0bd4baaea848988f45664ce0de33350" title=" " alt="" coords="1059,81,1148,108"/>
+<area shape="rect" id="node23" href="$group__chkptms.html#ga3794aff55627f45933b4610e180177f9" title="Read checkpoint snapshot." alt="" coords="315,588,479,615"/>
+<area shape="rect" id="node26" href="$group__chkptms.html#gad5af53d990af722a75c4aecd4376f882" title="Generate set of restart file names in snapshot." alt="" coords="322,740,471,767"/>
+<area shape="rect" id="node28" href="$prepost_8f.html#abb385320698675796ad307a27f4855af" title=" " alt="" coords="365,816,428,843"/>
+<area shape="rect" id="node24" href="$group__chkptms.html#ga341f4983e4ed93bd836259996798b629" title="Read field to the file." alt="" coords="538,613,645,640"/>
+<area shape="rect" id="node25" href="$ic_8f.html#a8947b3794015310a5f2962f2c8f1c4cb" title=" " alt="" coords="760,233,827,260"/>
+<area shape="rect" id="node27" href="$group__chkptms.html#gaf5e092062f0d392eb7e19ee08a9dd195" title="Generate single restart file name." alt="" coords="538,715,645,741"/>
+<area shape="rect" id="node29" href="$math_8f.html#a102af0dc870819a605ae55d60c59f84a" title=" " alt="" coords="562,816,621,843"/>
+<area shape="rect" id="node30" href="$comm__mpi_8f.html#a1dc8c1bc7e3a04d6080d70922c6ad5be" title=" " alt="" coords="527,867,656,893"/>
+<area shape="rect" id="node32" href="$math_8f.html#a3470db04166d9ba91454a14cc17dbec2" title=" " alt="" coords="567,1272,616,1299"/>
+<area shape="rect" id="node34" href="$dssum_8f.html#ad67373714b1c3bafed536081167e2cd6" title=" " alt="" coords="559,1120,624,1147"/>
+<area shape="rect" id="node36" href="$dssum_8f.html#a99883f15d413d614f361d5864d3bac55" title=" " alt="" coords="361,1171,432,1197"/>
+<area shape="rect" id="node38" href="$navier1_8f.html#a968374df04841450c737483b598fa474" title=" " alt="" coords="364,1221,429,1248"/>
+<area shape="rect" id="node39" href="$navier1_8f.html#a2f89b54d1ceda6fb201432d7a61bc907" title=" " alt="" coords="356,1019,437,1045"/>
+<area shape="rect" id="node33" href="$comm__mpi_8f.html#af06ec29f06aac3f8809e19de2a7e8946" title=" " alt="" coords="749,1171,837,1197"/>
+<area shape="rect" id="node35" href="$comm__mpi_8f.html#a4acb4d8e379294232e9219bec063d8f3" title=" " alt="" coords="751,1069,835,1096"/>
+<area shape="rect" id="node37" href="$dssum_8f.html#a31a64067a6274e816e2291149e0fbc26" title=" " alt="" coords="557,1171,626,1197"/>
+<area shape="rect" id="node40" href="$navier1_8f.html#a7dc78f2f7df7b41bdbfe8f1bb2d80b4d" title=" " alt="" coords="546,968,637,995"/>
+<area shape="rect" id="node41" href="$dssum_8f.html#a04a475747f747981907f8e5203c421ed" title=" " alt="" coords="544,1019,639,1045"/>
+</map>

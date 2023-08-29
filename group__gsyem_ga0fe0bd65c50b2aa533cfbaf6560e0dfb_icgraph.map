@@ -1,0 +1,5 @@
+<map id="gsyem_adv_eddy" name="gsyem_adv_eddy">
+<area shape="rect" id="node1" title="Advect/recycle eddies (gsyem_mode.eq.1) for a given family." alt="" coords="325,5,461,32"/>
+<area shape="rect" id="node2" href="$group__gsyem.html#ga36b63ec7f01ee16a54a05a0d8a3dfbee" title="Time evolution of eddies." alt="" coords="160,5,277,32"/>
+<area shape="rect" id="node3" href="$group__gsyem.html#ga8991b683d395c74e2774dc56bf1cd0a7" title="Main gSyEM interface." alt="" coords="5,5,112,32"/>
+</map>

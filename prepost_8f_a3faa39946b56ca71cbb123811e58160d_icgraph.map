@@ -1,0 +1,13 @@
+<map id="mfo_open_files" name="mfo_open_files">
+<area shape="rect" id="node1" title=" " alt="" coords="501,81,624,108"/>
+<area shape="rect" id="node2" href="$prepost_8f.html#a2b0ed536ab0284c398d7f2ac35622d88" title=" " alt="" coords="345,5,438,32"/>
+<area shape="rect" id="node5" href="$group__stat.html#gaaf6879d5db7c39db485b088babf5ff94" title="Write element centres to the file (in case of AMR level as well)" alt="" coords="330,56,453,83"/>
+<area shape="rect" id="node6" href="$group__stat.html#gae0917441bba221a62e956c7ea5622675" title="Statistics muti&#45;file output of 2D data." alt="" coords="140,68,281,95"/>
+<area shape="rect" id="node8" href="$group__tsrs.html#ga399fe64adceb62163847a97ff428af73" title="Write a point history file." alt="" coords="329,157,453,184"/>
+<area shape="rect" id="node3" href="$prepost_8f.html#a7e6b503691396e2ba24a32272da91f7a" title=" " alt="" coords="181,5,241,32"/>
+<area shape="rect" id="node4" href="$prepost_8f.html#a4a3b0e4ce35b3381281c0839e5846370" title=" " alt="" coords="13,5,84,32"/>
+<area shape="rect" id="node7" href="$group__stat.html#ga646a7c83620c31e3fbdd385eeeb7fd2c" title="Main interface for saving statistics." alt="" coords="9,68,89,95"/>
+<area shape="rect" id="node9" href="$group__tsrs.html#gae40ec6c9069e1a9fde226bcaad5e5e87" title="Buffer and save interpolated fields." alt="" coords="145,157,276,184"/>
+<area shape="rect" id="node10" href="$group__tsrs.html#ga901638f3fa9b929b7787591a91bfd8b7" title="Finalise time series module." alt="" coords="10,144,87,171"/>
+<area shape="rect" id="node11" href="$group__tsrs.html#ga484dc0e23a97e3874c2fc46d6d73eb69" title="Main interface of time series module." alt="" coords="5,195,92,221"/>
+</map>

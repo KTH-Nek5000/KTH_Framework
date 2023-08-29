@@ -1,0 +1,5 @@
+<map id="arna_esolve" name="arna_esolve">
+<area shape="rect" id="node1" title="ARPACK postprocessing." alt="" coords="315,5,416,32"/>
+<area shape="rect" id="node2" href="$group__arna.html#ga61cd8777c90822cd29525e306f16879a" title="Create Krylov space, get Ritz values and restart stepper phase." alt="" coords="145,5,267,32"/>
+<area shape="rect" id="node3" href="$group__tstpr.html#ga5d4f30a0feb1064c7576467bca77b693" title="Control time stepper after every nek5000 step and call suitable stepper_vsolve of required submodule." alt="" coords="5,5,97,32"/>
+</map>

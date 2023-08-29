@@ -1,0 +1,6 @@
+<map id="tripl_frcs_get" name="tripl_frcs_get">
+<area shape="rect" id="node1" title="Generate forcing along 1D line." alt="" coords="153,56,260,83"/>
+<area shape="rect" id="node2" href="$group__tripl.html#gafa9770b465a7ed852f178de153efa435" title="Initilise tripping module." alt="" coords="17,5,93,32"/>
+<area shape="rect" id="node3" href="$group__tripl.html#ga1eeb350b11b06dce8c5cd3c890c82ab1" title="Reset tripping." alt="" coords="11,56,99,83"/>
+<area shape="rect" id="node4" href="$group__tripl.html#ga31ec6216f507e798c3fc3d3429429105" title="Update tripping." alt="" coords="5,107,105,133"/>
+</map>

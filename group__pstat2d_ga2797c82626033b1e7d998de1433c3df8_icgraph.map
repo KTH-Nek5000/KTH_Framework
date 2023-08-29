@@ -1,0 +1,6 @@
+<map id="pstat2d_mfi_crd2d" name="pstat2d_mfi_crd2d">
+<area shape="rect" id="node1" title="Read nonconforming data from the file." alt="" coords="340,31,483,57"/>
+<area shape="rect" id="node2" href="$group__pstat2d.html#ga0da79899b2190d60ea1954710fab1b96" title="Initilise pstat module." alt="" coords="179,5,277,32"/>
+<area shape="rect" id="node3" href="$group__pstat2d.html#gabcd15769d3efb235456125872e81b712" title="Read in fields and average them." alt="" coords="164,56,292,83"/>
+<area shape="rect" id="node4" href="$group__pstat2d.html#gaad68c82ca1e788e4c8cbe540edf3498f" title="Main interface of pstat module." alt="" coords="5,56,116,83"/>
+</map>

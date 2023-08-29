@@ -1,0 +1,6 @@
+<map id="Frame module" name="Frame module">
+<area shape="rect" id="node1" href="$group__rprm.html" title="Routines related to module&#39;s runtime parameters." alt="" coords="332,5,488,31"/>
+<area shape="rect" id="node2" title="Backbone for toolboxes." alt="" coords="168,31,284,56"/>
+<area shape="rect" id="node3" href="$group__mntr.html" title="Monitoring routines for toolboxes." alt="" coords="337,55,483,80"/>
+<area shape="rect" id="node4" href="$group__driver.html" title="Driver routines for toolboxes." alt="" coords="5,31,120,56"/>
+</map>

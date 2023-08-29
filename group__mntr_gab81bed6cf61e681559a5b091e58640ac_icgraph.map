@@ -1,0 +1,8 @@
+<map id="mntr_log_local" name="mntr_log_local">
+<area shape="rect" id="node1" title="Write log message from given process." alt="" coords="577,31,696,57"/>
+<area shape="rect" id="node2" href="$group__gsyem.html#ga97d397a476fede5da33b14c9427885c9" title="Read profiles for all familes." alt="" coords="386,5,521,32"/>
+<area shape="rect" id="node4" href="$group__mntr.html#ga3955f6d6386b890963e294da79b0b260" title="Provide ordered list of registered modules for printing." alt="" coords="377,56,529,83"/>
+<area shape="rect" id="node3" href="$group__gsyem.html#ga73294eaccf8e6a4700f60e62754c5a30" title="Initilise gSyEM module." alt="" coords="185,5,279,32"/>
+<area shape="rect" id="node5" href="$group__mntr.html#ga11eb72ddf772cb55dfc112cfc070acc3" title="Print registered modules showing tree structure." alt="" coords="135,56,329,83"/>
+<area shape="rect" id="node6" href="$group__mntr.html#ga9857db9e2b30b884b0c48aa8367a5ea2" title="Initialise monitor module." alt="" coords="5,56,87,83"/>
+</map>

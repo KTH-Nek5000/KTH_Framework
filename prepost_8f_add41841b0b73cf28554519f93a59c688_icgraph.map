@@ -1,0 +1,16 @@
+<map id="mfo_write_hdr" name="mfo_write_hdr">
+<area shape="rect" id="node1" title=" " alt="" coords="549,132,665,159"/>
+<area shape="rect" id="node2" href="$group__arna.html#ga341bba5ff555f8b9d3388bc7219495cc" title="Write procesor dependent data (long vectors)" alt="" coords="400,31,492,57"/>
+<area shape="rect" id="node5" href="$group__chkptms.html#ga5b92698099b1ca5e62d47a8a96dfadee" title="Write field to the file." alt="" coords="391,107,501,133"/>
+<area shape="rect" id="node9" href="$prepost_8f.html#a2b0ed536ab0284c398d7f2ac35622d88" title=" " alt="" coords="399,157,493,184"/>
+<area shape="rect" id="node12" href="$group__sfd.html#ga98e882dcaf69a8ff2ccaf8c2a27ebf45" title="Store SFD restart file." alt="" coords="409,208,483,235"/>
+<area shape="rect" id="node3" href="$group__arna.html#gaebc5ed853afac5b8ca3c12fe17b1f816" title="Write restart files." alt="" coords="202,19,315,45"/>
+<area shape="rect" id="node4" href="$group__arna.html#ga61cd8777c90822cd29525e306f16879a" title="Create Krylov space, get Ritz values and restart stepper phase." alt="" coords="5,5,127,32"/>
+<area shape="rect" id="node6" href="$group__chkptms.html#ga654d70b685d830ac8cdf030fefb6d29e" title="Write checkpoint snapshot." alt="" coords="175,107,343,133"/>
+<area shape="rect" id="node7" href="$group__chkptms.html#ga5a1a5e27f3cc18d976b7ca6f0ac4bcba" title="Write full file restart set." alt="" coords="13,56,119,83"/>
+<area shape="rect" id="node8" href="$group__pwit.html#gae25b7393d77e1cd5139cd60f0672b4b5" title="Write restart files." alt="" coords="11,107,121,133"/>
+<area shape="rect" id="node10" href="$prepost_8f.html#a7e6b503691396e2ba24a32272da91f7a" title=" " alt="" coords="229,157,289,184"/>
+<area shape="rect" id="node11" href="$prepost_8f.html#a4a3b0e4ce35b3381281c0839e5846370" title=" " alt="" coords="31,157,101,184"/>
+<area shape="rect" id="node13" href="$group__sfd.html#ga89991c1aeab15b83507d645abf1180ac" title="Create checkpoint." alt="" coords="205,208,312,235"/>
+<area shape="rect" id="node14" href="$group__sfd.html#ga0b6632977093e8240081e63a4581ae7a" title="Main SFD interface." alt="" coords="25,208,107,235"/>
+</map>
